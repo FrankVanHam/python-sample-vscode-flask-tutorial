@@ -22,4 +22,5 @@ steps:
 
   - script: |
       ls -R $(Build.SourcesDirectory)
+      printenv
     displayName: 'List all content'
