@@ -18,8 +18,8 @@ steps:
       vstsFeed: 'SW/froggie'                        ## The Artifacts feed hosting the package to be downloaded
       vstsFeedPackage: 'cst.jar'                             ## Name of the package to be downloaded
       vstsPackageVersion: '5.3.0'                       ## Version of the package to be downloaded
-      downloadDirectory: '$(Build.SourcesDirectory)\download'     ## The download folder. Default value: $(System.DefaultWorkingDirectory).
+      downloadDirectory: '$(Build.SourcesDirectory)/download'     ## The download folder. Default value: $(System.DefaultWorkingDirectory).
 
   - script: |
-      ls -R \
+      ls -R /
     displayName: 'List all content'
