@@ -23,4 +23,5 @@ steps:
   - script: |
       ls -R $(Build.SourcesDirectory)
       printenv
+      whoami
     displayName: 'List all content'
