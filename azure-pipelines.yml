@@ -1,5 +1,5 @@
 trigger:
-- main
+- no_main
 
 pool:
   vmImage: ubuntu-latest
