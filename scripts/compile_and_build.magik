@@ -1,5 +1,5 @@
-_package user
-$
+#_package user
+#$
 
 
 def_slotted_exemplar(:bob, {})
@@ -37,6 +37,7 @@ $
 
 _block 
 	bob.build()
+	quit()
 _endblock
 $
 
