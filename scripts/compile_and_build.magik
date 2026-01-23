@@ -22,7 +22,7 @@ $
 
 _pragma(classify_level=restricted, topic={azure})
 _method bob.int!build(p_product, p_session_name)
-	_local prod << sw:smallworld_product.add_product(p_product)
+	_local prod << sw:smallworld_product.add_product(p_product.as_symbol())
 	_self.compile(prod)
 _endmethod
 $
