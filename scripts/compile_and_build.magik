@@ -21,17 +21,17 @@ _endmethod
 $
 
 _pragma(classify_level=restricted, topic={azure})
-_method bob.int!build(p_product_dir, p_session_name)
-	_local prod << sw:smallworld_product.load_product_definition(p_product_dir)
+_method bob.int!build(p_product, p_session_name)
+	_local prod << sw:smallworld_product.add_product(p_product)
 	_self.compile(prod)
 _endmethod
 $
 
 _pragma(classify_level=restricted, topic={azure})
 _method bob.build() 
-	_local prod_dir << system.getenv("AZ_SW_PRODUCT_DIR_TO_BUILD")
+	_local prod << system.getenv("AZ_SW_PRODUCT_TO_BUILD")
 	_local session_name << system.getenv("AZ_SW_SESSION_TO_BUILD")
-	_self.int!build(prod_dir, session_name)
+	_self.int!build(prod, session_name)
 _endmethod
 $
 
